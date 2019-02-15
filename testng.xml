@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel test runs">
-	<parameter name="jobId" value="job-5e867899-b7bf-4553-b8f2-529f5d118584"></parameter>
+	<parameter name="jobId" value="job-e337584a-9b29-41ae-ad2d-6a78ab4c63dc"></parameter>
 	
 	<listeners>
        <listener class-name="gridnodes.listeningcount"/>
