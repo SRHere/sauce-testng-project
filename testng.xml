@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test runs">
+	<parameter name="jobId" value="job-5e867899-b7bf-4553-b8f2-529f5d118584"></parameter>
+	
+	<listeners>
+       <listener class-name="gridnodes.listeningcount"/>
+       <listener class-name="gridnodes.StepLibSuiteListener"/>
+  </listeners>
+	<test name="test1">
+		<classes>
+			<class name="com.step.sauce.SauceEmulatorWebTest1"></class>
+		</classes>
+	</test>
+		<test name="test2">
+		<classes>
+			<class name="com.step.sauce.SauceEmulatorWebTest2"></class>
+		</classes>
+	</test>
+</suite>
+

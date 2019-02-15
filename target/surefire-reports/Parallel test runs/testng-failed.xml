@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel test runs]" parallel="tests">
+  <parameter name="jobId" value="job-c9f781d7-0b46-4181-ad29-b140eb9cc343"/>
+  <listeners>
+    <listener class-name="gridnodes.listeningcount"/>
+    <listener class-name="gridnodes.StepLibSuiteListener"/>
+  </listeners>
+  <test name="Test_01">
+    <classes>
+      <class name="com.step.sauce.Calculator"/>
+    </classes>
+  </test> <!-- Test_01 -->
+  <test name="Test_01(failed)" parallel="tests">
+    <classes>
+      <class name="com.step.sauce.Calculator">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyCommentInputTest"/>
+        </methods>
+      </class> <!-- com.step.sauce.Calculator -->
+    </classes>
+  </test> <!-- Test_01(failed) -->
+</suite> <!-- Failed suite [Parallel test runs] -->
